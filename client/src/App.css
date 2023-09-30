@@ -1,6 +1,24 @@
 .App {
   text-align: center;
-  
+}
+body {
+  position: relative;
+  background-image: url("../image1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
+  pointer-events: none;
+  z-index: -1;
 }
 
 .App-logo {
@@ -15,7 +33,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-image: "../image1.jpg";
+  background-color: #54d278;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,9 +47,9 @@
 .App-link {
   color: #61dafb;
 }
-.font{
+.font {
   color: white;
-text-align: center;
+  text-align: center;
   font-size: 17px;
   font-weight: bold;
 }
@@ -39,4 +58,9 @@ h1 {
   color: white;
   font-size: 60px;
   margin-bottom: 30px;
+}
+.list {
+  background-color: #6b5b95;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
